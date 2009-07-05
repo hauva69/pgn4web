@@ -1,0 +1,56 @@
+
+html, body { 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: sans-serif;
+  color: black;
+  background: white;
+}
+
+.boardTable {
+  border-style: double; 
+  border-color: black;
+  border-width: 3px;
+}
+
+.whiteSquare {
+  background: #EFF4EC;
+}
+
+.blackSquare {
+  background: #C6CEC3;
+}
+
+.highlightSquare {
+  background: #DAF4D7;
+}
+
+
+.button {
+}
+
+.select {
+}
+
+.move {
+  color: black;
+  font-weight: normal;
+  text-decoration: none;   
+}
+
+
+.moveOn {
+  color: black;
+  font-weight: normal;
+  text-decoration: none;
+  background: #DAF4D7;
+}
+
+
+.comment {
+  color: gray;
+}
+
