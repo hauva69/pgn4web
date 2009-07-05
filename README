@@ -1,0 +1,91 @@
+PGN4WEB
+
+
+ABOUT
+
+PGN4WEB is a javascript tool to display chess games from a PGN file.
+The tool has been designed to allow frequent updates of the PGN file
+without the need of manually generating new html pages each time.
+
+Project homepage: thttp://code.google.com/p/pgn4web
+Contact: pgn4web@casaschi.net
+
+Features:
+- display chess games form a PGN file on a chessboard on the webpage
+- shortcut keys for navigating through the game, for selecting the
+  game from the file and much more (hit escape for help)
+- fully customizable display. Each item (board, button bar, game
+  selection menu, PGN header info, game text, game comment and more)
+  can be displayed (or hidden) at pleasure in your html file
+- support different chess bitmaps (even custom bitmaps) and different
+  chessboard sizes (allowing even for runtime resize of the board)
+
+Limitations:
+- variations are displayed as comment, it's not possible to display
+  in the chessboard positions from variations
+- only one chessboard for html file (use frames if you need to display
+  more in the same view)
+
+Enjoy!
+
+
+HOW TO USE pgn4we.js
+
+add a SCRIPT instance at the top of your HTML file:
+
+  <script src="pgn4web.js" type="text/javascript"></script>
+
+then add another SCRIPT instance with at least the call to 
+
+  SetPgnUrl("http://yoursite/yourpath/yourfile.pgn")
+
+and optionally any of the other calls listed below.  
+
+Example:
+
+  <script yype="text/javascript>
+    SetPgnUrl("http://yoursite/yourpath/yourfile.pgn");
+    SetImagePath (""); // use "" path if images are in the same folder as this javascript file
+    SetImageType("png");
+    SetImageSize(40);
+    SetSquareSize(42);
+    SetHighlightOption(true) // true or false
+    SetGameSelectorString("Select a game...");
+    SetAutoplayDelay(1000); // milliseconds
+    SetCommentsIntoMoveText(false)
+    SetCommentsOnSeparateLines(false)
+  </script>
+ 
+Then the script will automagically add content into your HTML file 
+to any <div> or <span> containers with the following IDs:
+
+  <div id="GameSelector"></div>
+  <div id="GameLastMove"></div>
+  <div id="GameNextMove"></div>
+  <div id="GameSideToMove"></div>
+  <div id="GameLastComment"></div>
+  <div id="GameBoard"></div>
+  <div id="GameButtons"></div>
+  <div id="GameEvent"></div>
+  <div id="GameSite"></div>
+  <div id="GameDate"></div>
+  <div id="GameWhite"></div>
+  <div id="GameBlack"></div>
+  <div id="GameResult"></div>
+  <div id="GameText"></div>
+
+The file pgn4web.css shows a list of customization style options.
+
+See pgn4web.html file for an example.
+
+
+CREDITS
+
+javascript modifications of Paolo Casaschi (pgn4web@casaschi.net) on code from 
+the http://ficsgames.com database, in turn likely based on code from the LT PGN 
+viewer at http://www.lutanho.net/pgn/pgnviewer.html
+
+PNG images from http://ixian.com/chess/jin-piece-sets (creative commons 
+attribution-share alike 3.0 unported license)
+
+
